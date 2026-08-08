@@ -15,7 +15,8 @@ export default function Footer() {
               padding: '6px',
               borderRadius: '12px',
               boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
-              border: '1px solid rgba(0,0,0,0.05)'
+              border: '1px solid rgba(0,0,0,0.05)',
+              flexShrink: 0
             }}>
               <img src="/dns-logo.png" alt="DNS International Logo" style={{ width: '56px', height: '56px', objectFit: 'contain' }} />
             </span>
