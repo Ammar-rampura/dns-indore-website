@@ -91,6 +91,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 96px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -102,6 +104,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 img {
@@ -1189,7 +1192,7 @@ body.is-loading .hero__hint {
   list-style: none;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   margin-top: clamp(56px, 7vw, 88px);
   padding-top: 30px;

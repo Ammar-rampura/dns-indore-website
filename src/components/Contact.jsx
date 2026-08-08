@@ -124,12 +124,10 @@ export default function Contact() {
                 </div>
                 <div className="form__field">
                   <label htmlFor="cf-subject">I'm interested in</label>
-                  <select id="cf-subject" name="subject" defaultValue="CFA Partnership">
-                    <option>CFA Partnership</option>
-                    <option>Warehousing Space</option>
-                    <option>Distribution / Transport</option>
-                    <option>Distributor Enquiry</option>
-                    <option>Other</option>
+                  <select id="cf-subject" name="subject" defaultValue="Knowing more about warehouse spaces">
+                    <option>Knowing more about warehouse spaces</option>
+                    <option>CFA partnership</option>
+                    <option>Others</option>
                   </select>
                 </div>
                 <div className="form__field">

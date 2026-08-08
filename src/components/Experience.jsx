@@ -179,7 +179,7 @@ export function Preloader() {
       <div className="preloader__scene" ref={sceneRef} />
       <div className="preloader__inner">
         <p className="preloader__word">
-          <span>Godrej</span> <span>DNS</span>
+          <span>DNS</span> <span>International</span>
         </p>
         <div className="preloader__meta">
           <span className="preloader__line" />

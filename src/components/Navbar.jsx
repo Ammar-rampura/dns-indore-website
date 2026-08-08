@@ -3,16 +3,21 @@ import { company, navLinks } from '../data/content.js'
 
 function Logo() {
   return (
-    <a href="#top" className="logo" aria-label={`${company.name} — home`}>
-      <span className="logo__mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="34" height="34">
-          <rect width="32" height="32" rx="9" fill="var(--brand-950)" />
-          <path d="M9 21l5-9.5L18 18l2.2-3.5L23.5 21z" fill="var(--brand-400)" />
-          <circle cx="22.5" cy="10.5" r="2" fill="var(--gold-400)" />
-        </svg>
+    <a href="#top" className="logo" aria-label={`${company.name} — home`} style={{ marginLeft: '-3rem' }}>
+      <span className="logo__mark" aria-hidden="true" style={{ 
+        background: '#fff', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        padding: '6px',
+        borderRadius: '12px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+        border: '1px solid rgba(0,0,0,0.05)'
+      }}>
+        <img src="/dns-logo.png" alt="DNS International Logo" style={{ width: '56px', height: '56px', objectFit: 'contain' }} />
       </span>
       <span className="logo__text">
-        <strong>Godrej DNS</strong>
+        <strong>DNS International</strong>
         <small>CFA &amp; Warehousing</small>
       </span>
     </a>

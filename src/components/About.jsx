@@ -18,8 +18,8 @@ export default function About() {
             <div className="about__years">
               <b>{new Date().getFullYear() - company.established}+</b>
               <span>
-                Years as a<br />
-                Godrej CFA
+                Years of<br />
+                Excellence
               </span>
             </div>
           </Reveal>
@@ -65,7 +65,7 @@ export default function About() {
       <div className="container">
         <Reveal as="ol" className="about__timeline" delay={100}>
           {milestones.map((m, i) => (
-            <li className="about__milestone" key={m.year} style={{ '--d': `${i * 170}ms` }}>
+            <li className="about__milestone" key={m.year + m.text} style={{ '--d': `${i * 170}ms` }}>
               <span className="about__milestone-dot" aria-hidden="true" />
               <b>{m.year}</b>
               <p>{m.text}</p>

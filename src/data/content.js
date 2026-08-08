@@ -1,33 +1,31 @@
 /**
  * ─────────────────────────────────────────────────────────────────
  *  CENTRAL CONTENT FILE — ALL MOCK DATA LIVES HERE
- *  Replace the placeholder values below with real company data.
- *  No component code needs to change.
  * ─────────────────────────────────────────────────────────────────
  */
 
 export const company = {
-  name: 'Godrej DNS',
-  legalName: 'DNS Logistics & Warehousing Pvt. Ltd.', // MOCK — replace
-  tagline: 'Authorized CFA & Warehousing Partner — Godrej',
-  established: 2003, // MOCK
-  headline: 'Precision Warehousing. Reliable Distribution.',
+  name: 'DNS International',
+  legalName: 'DNS International',
+  tagline: 'Delivering Trust. Driving Excellence',
+  established: 1995,
+  headline: 'Moving Businesses Forward with Reliable Logistics Since 1995.',
   subheadline:
-    'For over two decades, we have operated as a trusted Carrying & Forwarding Agent for Godrej — moving thousands of shipments every month with enterprise-grade accuracy, safety and speed.',
-  phone: '+91 98765 43210', // MOCK
-  phoneAlt: '+91 731 400 1234', // MOCK
-  email: 'operations@godrejdns.in', // MOCK
+    'A trusted logistics and transportation company established in 1995, specializing in Carrying & Forwarding, Logistics, and Road Transportation Services.',
+  phone: '+91 98765 43210', 
+  phoneAlt: '+91 731 400 1234', 
+  email: 'operations@dnscnf.com', 
   address: {
-    line1: 'Plot 42–45, Sector C, Industrial Area', // MOCK
-    line2: 'Pithampur, Dhar District',
-    city: 'Indore, Madhya Pradesh — 454775',
+    line1: 'Corporate Office', 
+    line2: 'Logistics Park',
+    city: 'Indore, Madhya Pradesh',
     country: 'India',
   },
   hours: 'Mon – Sat · 8:00 AM – 8:00 PM',
   mapEmbedUrl:
-    'https://www.google.com/maps?q=Pithampur+Industrial+Area+Indore&output=embed', // MOCK — replace with exact plus-code / place link
+    'https://www.google.com/maps?q=Indore&output=embed', 
   social: {
-    linkedin: '#', // MOCK
+    linkedin: '#', 
     facebook: '#',
     instagram: '#',
   },
@@ -35,162 +33,192 @@ export const company = {
 
 /* ── Operations at a Glance — animated counters ─────────────────── */
 export const stats = [
-  { value: 22, suffix: '+', label: 'Years of Experience', sub: 'Serving Godrej since 2003' },
-  { value: 185000, suffix: ' sq.ft.', label: 'Warehouse Space', sub: 'Across 3 dedicated facilities', compact: true },
-  { value: 1200, suffix: '+', label: 'Daily Dispatches', sub: 'Invoices processed per day' },
-  { value: 32000, suffix: '+', label: 'Monthly Shipments', sub: 'Primary & secondary movement', compact: true },
-  { value: 240, suffix: '+', label: 'Trained Employees', sub: 'Warehouse, QC & admin staff' },
-  { value: 99.7, suffix: '%', label: 'Order Accuracy', sub: 'FIFO / batch-controlled picking', decimals: 1 },
+  { value: 29, suffix: '+', label: 'Years of Experience', sub: 'Since 1995' },
+  { value: 26, suffix: '+', label: 'Principal Companies', sub: 'Trusted by leading brands', compact: true },
+  { value: 100, suffix: '%', label: 'Commitment to Excellence', sub: 'Operational transparency' },
+  { value: 30, suffix: '+', label: 'Industries Supported', sub: 'FMCG, Pharma, Agrochemicals', compact: true },
 ]
 
 /* ── Hero quick-stat chips ──────────────────────────────────────── */
 export const heroStats = [
-  { value: '1.85L', label: 'sq.ft. warehousing' },
-  { value: '1,200+', label: 'dispatches / day' },
-  { value: '99.7%', label: 'order accuracy' },
+  { value: '1995', label: 'Established' },
+  { value: '26+', label: 'Principal Companies' },
+  { value: '100%', label: 'Commitment' },
 ]
 
 /* ── About Us ───────────────────────────────────────────────────── */
 export const about = {
   eyebrow: 'Who We Are',
-  title: 'A distribution backbone built on two decades of trust',
+  title: 'Nearly three decades of industry experience',
   paragraphs: [
-    'Godrej DNS began operations in 2003 as an authorized Carrying & Forwarding Agent, handling primary distribution for Godrej Consumer Products across Central India. What started as a single 20,000 sq.ft. godown is today a multi-facility logistics operation moving over 32,000 shipments a month.', // MOCK
-    'We combine disciplined warehouse management — FIFO stock rotation, batch tracking, cycle counts — with a modern fleet network and a team that treats every carton like it carries our own name. That is why our principal partners have renewed with us, year after year, for over two decades.',
+    'DNS International is a trusted logistics and transportation company established in 1995. With nearly three decades of industry experience, we provide reliable, safe, and efficient supply-chain solutions tailored to our clients’ needs.',
+    'We are backed by modern warehousing, experienced professionals, and a strong transportation network, with a commitment to operational excellence, transparency, customer satisfaction, dependable service, timely delivery, and long-term partnerships.',
   ],
   pillars: [
-    { title: 'Integrity First', text: 'Zero-tolerance policy on stock discrepancies with full audit transparency.' },
-    { title: 'Godrej-Grade SOPs', text: 'Operations aligned to principal company SOPs, safety and compliance norms.' },
-    { title: 'People-Powered', text: '240+ trained staff with structured induction and safety certification.' },
+    { title: 'Operational Excellence', text: 'Dependable service and timely delivery.' },
+    { title: 'Transparency', text: 'Commitment to customer satisfaction and long-term partnerships.' },
+    { title: 'Modern Infrastructure', text: 'Supported by experienced professionals and strong transport networks.' },
   ],
-  signatory: { name: 'Rajesh Nagar', role: 'Managing Director' }, // MOCK
+  signatory: { name: 'Leadership', role: 'DNS International' }, 
 }
 
-/* ── Company timeline — MOCK milestones, shown in About ─────────── */
+/* ── Company timeline — Growth milestones ─────────── */
 export const milestones = [
-  { year: '2003', text: 'Appointed Godrej CFA — first 20,000 sq.ft. godown' },
-  { year: '2010', text: 'Second facility opens; appliances division added' },
-  { year: '2016', text: 'SAP-integrated billing & barcode picking go live' },
-  { year: '2021', text: 'Third facility — 1,85,000 sq.ft. total capacity' },
-  { year: '2025', text: '32,000+ shipments moved every single month' },
+  { year: '1995', text: 'Established operations with our first principal partner.' },
+  { year: '2004', text: 'Expanded logistics and carrying & forwarding network.' },
+  { year: '2010', text: 'Scaled operations to support multiple leading national brands.' },
+  { year: '2016', text: 'Enhanced modern warehousing and technology integration.' },
+  { year: '2020', text: 'Expanded distribution capabilities across Central India.' },
+  { year: '2026', text: 'Trusted by 26+ principal companies and growing.' },
 ]
 
-/* ── Live-operations ticker — MOCK dispatch events ──────────────── */
+/* ── Principal Companies (Logos) ─────────── */
+export const principalCompanies = [
+  { year: '1995', text: 'Heinz', logo: '/images/image1.png' },
+  { year: '1996', text: 'Virbac (formerly Glaxo Veterinary)', logo: '/images/image2.png' },
+  { year: '2004', text: 'Nutrigen', logo: '/images/image3.png' },
+  { year: '2006', text: 'Desai Brothers', logo: '/images/image4.png' },
+  { year: '2007', text: 'Naturo Foods', logo: '/images/image5.png' },
+  { year: '2007', text: 'Bilt Paper', logo: '/images/image6.png' },
+  { year: '2007', text: 'Dunlop Tyres', logo: '/images/image7.png' },
+  { year: '2008', text: 'Chemenova', logo: '/images/image8.png' },
+  { year: '2010', text: 'Nippon Paint', logo: '/images/image9.png' },
+  { year: '2010', text: 'Amaraja', logo: '/images/image10.png' },
+  { year: '2013', text: 'Hershey', logo: '/images/image11.png' },
+  { year: '2014', text: 'Namdhari Seeds', logo: '/images/image12.png' },
+  { year: '2015', text: 'Zytex', logo: '/images/image13.png' },
+  { year: '2016', text: 'ICL', logo: '/images/image14.png' },
+  { year: '2016', text: 'Jubilant', logo: '/images/image15.png' },
+  { year: '2016', text: 'Prolaboratories Private Limited', logo: '/images/image16.png' },
+  { year: '2018', text: 'Tranfarma', logo: '/images/image17.png' },
+  { year: '2019', text: 'Wiekefield', logo: '/images/image18.png' },
+  { year: '2020', text: 'Natural Fertilizer', logo: '/images/image19.png' },
+  { year: '2023', text: 'Underwood', logo: '/images/image20.png' },
+  { year: '2024', text: 'Hoescht', logo: '/images/image21.png' },
+  { year: '2025', text: 'Mabsy', logo: '/images/image22.png' },
+  { year: '2025', text: 'American Pharma Remedies', logo: '/images/image23.png' },
+  { year: '2025', text: 'GNX Agro', logo: '/images/image24.png' },
+  { year: '2025', text: 'JK Cement', logo: '/images/image25.png' },
+  { year: '2026', text: 'Finozen Nutrigen', logo: '/images/image26.png' },
+]
+
+/* ── Live-operations ticker ──────────────── */
 export const dispatchTicker = [
-  'LR #48213 → Bhopal · departed 06:40',
-  'LR #48214 → Indore City · delivered 09:12',
-  'GRN #7731 · 412 cartons inward · Facility 1',
-  'LR #48215 → Nagpur · in transit',
-  'Cycle count · Rack D2 · 100% match',
-  'LR #48216 → Ujjain · departed 11:05',
-  'POD #48188 · Gwalior · claim settled same day',
-  'LR #48217 → Jabalpur · e-way bill generated',
+  'DNS International: Delivering Trust.',
+  'Driving Excellence since 1995.',
+  'Modern warehousing & storage operations.',
+  'Reliable logistics and road transportation.',
 ]
 
 /* ── Services ───────────────────────────────────────────────────── */
 export const services = [
   {
     icon: 'warehouse',
-    title: 'CFA Operations',
-    text: 'End-to-end carrying & forwarding for principal companies — receiving, storage, invoicing, dispatch and claims settlement under one disciplined roof.',
+    title: 'CFA Management',
+    text: 'End-to-end carrying and forwarding for principal companies including receiving, storage, invoicing, dispatch, and claims settlement.',
   },
   {
     icon: 'boxes',
     title: 'Warehousing & Storage',
-    text: '1.85 lakh sq.ft. of racked, ventilated and pest-controlled space with dedicated zones for FMCG, appliances and high-value SKUs.',
-  },
-  {
-    icon: 'truck',
-    title: 'Primary & Secondary Distribution',
-    text: 'Scheduled line-hauls and last-mile beat plans covering 450+ distributors and direct dealers across the region.',
-  },
-  {
-    icon: 'clipboard',
-    title: 'Inventory Management',
-    text: 'FIFO / FEFO rotation, batch & expiry tracking, daily stock reconciliation and monthly physical audits with 99.7% accuracy.',
+    text: 'Racked/palleted warehouses, ventilated and pest-controlled spaces, with dedicated zones for FMCG, appliances, and high-value SKUs.',
   },
   {
     icon: 'document',
     title: 'Billing & Documentation',
-    text: 'SAP / DMS-integrated invoicing, e-way bills, GST-compliant documentation and same-day claim processing.',
+    text: 'SAP/DMS-integrated invoicing, e-way bills, GST-compliant documentation, and same-day claim processing.',
+  },
+  {
+    icon: 'clipboard',
+    title: 'Inventory Management',
+    text: 'Batch and expiry tracking, daily stock reconciliation, and monthly physical audits.',
+  },
+  {
+    icon: 'truck',
+    title: 'Primary & Secondary Distribution',
+    text: 'Comprehensive transportation covering all of Madhya Pradesh.',
   },
   {
     icon: 'shield',
     title: 'Safety & Compliance',
-    text: 'Fire-suppression systems, insured stock handling, CCTV-monitored premises and full statutory compliance.',
+    text: 'Fire-suppression systems, insured stock handling, CCTV-monitored premises, and full statutory compliance.',
   },
 ]
 
 /* ── Infrastructure ─────────────────────────────────────────────── */
 export const infrastructure = {
   eyebrow: 'Infrastructure',
-  title: 'Facilities engineered for scale, safety and speed',
+  title: 'Built for Safety, Scale and Efficiency',
   intro:
-    'Every square foot of our warehousing network is designed around one goal — getting stock in, stored and shipped without error.',
-  image:
-    'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=70',
-  imageAlt: 'Racked warehouse aisles with palletized stock',
+    'Our robust infrastructure guarantees that every shipment is stored securely and moved seamlessly.',
+  image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=70',
+  imageAlt: 'DNS International Warehouse Infrastructure',
   features: [
-    'Three facilities totalling 1,85,000 sq.ft. of covered storage', // MOCK
-    'Heavy-duty selective racking — 12,500+ pallet positions',
-    '14 hydraulic dock levellers for simultaneous loading',
-    'CCTV surveillance with 90-day recording & 24×7 security',
-    'Fire hydrant network, smoke detectors & sprinkler zones',
-    'Dedicated cold-safe and high-value caged storage areas',
+    'Heavy-duty lifts with 5–10 ton capacity',
+    'Hydraulic lifts for swift operations',
+    'Fire-compression & suppression systems',
+    'Cold storage facilities',
+    'CCTV surveillance for maximum security',
+    'Power backup for continuous electricity supply',
   ],
   specs: [
-    { label: 'Total Covered Area', value: '1,85,000 sq.ft.' },
-    { label: 'Pallet Positions', value: '12,500+' },
-    { label: 'Loading Docks', value: '14 bays' },
-    { label: 'MHE Fleet', value: '9 forklifts · 22 hand pallet trucks' },
-    { label: 'Power Backup', value: '250 kVA DG sets' },
-    { label: 'Clear Height', value: '11 metres' },
+    { label: 'Heavy Lifts', value: '5-10 Ton' },
+    { label: 'Security', value: '24/7 CCTV' },
+    { label: 'Safety', value: 'Fire-Compression' },
+    { label: 'Storage', value: 'Cold Storage' },
+    { label: 'Power', value: 'Backup Systems' },
+    { label: 'Equipment', value: 'Hydraulic Lifts' },
   ],
 }
 
-/* ── Brands / Companies We Serve ────────────────────────────────── */
+/* ── Industries We Support (Replaces Brands) ────────────────────── */
 export const brands = [
-  { name: 'Godrej Consumer Products', short: 'GCPL' },
-  { name: 'Godrej Appliances', short: 'Appliances' },
-  { name: 'Godrej Interio', short: 'Interio' },
-  { name: 'Godrej Locks', short: 'Locks' },
-  { name: 'Godrej Security Solutions', short: 'Security' },
-  { name: 'Godrej Agrovet', short: 'Agrovet' },
-  { name: 'Godrej Aer', short: 'Aer' },
-  { name: 'Godrej Hershey', short: 'Hershey' },
+  { name: 'Food & FMCG', short: 'Food/FMCG' },
+  { name: 'Beverages', short: 'Beverages' },
+  { name: 'Healthcare & Pharmaceuticals', short: 'Pharma' },
+  { name: 'Personal Care & Hygiene', short: 'Personal Care' },
+  { name: 'Baby Care Products', short: 'Baby Care' },
+  { name: 'Home Care & Cleaning Products', short: 'Home Care' },
+  { name: 'Fabric Care & Laundry Products', short: 'Fabric Care' },
+  { name: 'Animal Health & Veterinary Products', short: 'Vet Health' },
+  { name: 'Animal Nutrition & Feed', short: 'Animal Feed' },
+  { name: 'Agriculture & Agrochemicals', short: 'Agrochemicals' },
+  { name: 'Industrial Chemicals', short: 'Chemicals' },
+  { name: 'Paints & Coatings', short: 'Paints' },
+  { name: 'Consumer Packaged Goods (CPG)', short: 'CPG' },
+  { name: 'Retail & Distribution', short: 'Retail' },
 ]
 
 /* ── Why Choose Us ──────────────────────────────────────────────── */
 export const whyUs = [
   {
     icon: 'medal',
-    title: '22 Years, One Principal',
-    text: 'Uninterrupted CFA partnership with Godrej since 2003 — a track record very few agencies can claim.',
+    title: 'Experience Since 1995',
+    text: 'Trusted logistics and transportation company established in 1995 with nearly three decades of experience.',
   },
   {
     icon: 'target',
-    title: '99.7% Dispatch Accuracy',
-    text: 'Barcode-assisted picking and double-verification gates keep shortages and damages near zero.',
+    title: 'Tailored Solutions',
+    text: 'Providing reliable, safe, and efficient supply-chain solutions tailored to our clients’ needs.',
   },
   {
     icon: 'clock',
-    title: 'Same-Day Order Processing',
-    text: 'Orders received before 2 PM are invoiced, picked and dispatched the same day — every day.',
+    title: 'Operational Excellence',
+    text: 'A commitment to operational excellence, transparency, customer satisfaction, and dependable service.',
   },
   {
     icon: 'network',
-    title: '450+ Distributor Network',
-    text: 'Established beat plans and transporter tie-ups across Madhya Pradesh and adjoining states.',
+    title: 'Strong Network',
+    text: 'Backed by modern warehousing, experienced professionals, and a strong transportation network.',
   },
   {
     icon: 'chart',
-    title: 'Full Digital Visibility',
-    text: 'SAP/DMS integration, daily MIS reports and live stock dashboards for principal companies.',
+    title: 'Timely Delivery',
+    text: 'Dedicated to timely delivery and long-term partnerships with our principal companies.',
   },
   {
     icon: 'handshake',
-    title: 'Audit-Ready, Always',
-    text: 'Clean statutory record — GST, labour, fire & insurance compliance maintained continuously.',
+    title: 'Comprehensive Coverage',
+    text: 'Primary and secondary distribution covering all of Madhya Pradesh.',
   },
 ]
 
@@ -199,112 +227,105 @@ export const processSteps = [
   {
     step: '01',
     title: 'Inward & GRN',
-    text: 'Vehicles docked, stock unloaded against STN, physically verified and GRN posted in SAP within 4 hours.',
+    text: 'Vehicles docked, stock unloaded, physically verified and GRN posted efficiently.',
   },
   {
     step: '02',
     title: 'Put-Away & Storage',
-    text: 'Palletized stock moved to mapped rack locations with batch, MRP and expiry captured at bin level.',
+    text: 'Palletized stock moved to mapped rack locations with batch and expiry tracking.',
   },
   {
     step: '03',
     title: 'Order & Invoicing',
-    text: 'Distributor orders validated against credit & schemes, invoiced with e-way bills auto-generated.',
+    text: 'Orders validated, invoiced with e-way bills and GST-compliant documentation generated.',
   },
   {
     step: '04',
     title: 'Picking & QC',
-    text: 'FIFO-driven pick lists executed and double-checked at the verification gate before packing.',
+    text: 'Batch-tracked pick lists executed and double-checked at the verification gate.',
   },
   {
     step: '05',
     title: 'Dispatch & Delivery',
-    text: 'Route-optimized loading, LR generation and GPS-tracked transit to 450+ delivery points.',
+    text: 'Route-optimized loading and distribution covering all of Madhya Pradesh.',
   },
   {
     step: '06',
     title: 'POD & Reconciliation',
-    text: 'Proof of delivery collected, claims settled and daily stock reconciliation reported to principals.',
+    text: 'Proof of delivery collected, claims settled and physical audits reconciled.',
   },
 ]
 
-/* ── Gallery — replace URLs with real facility photos ───────────── */
+/* ── Gallery ───────────── */
 export const gallery = [
   {
     src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=70',
-    caption: 'Racked storage — Facility 1, Pithampur',
+    caption: 'Warehouse Exteriors & Facilities',
     tall: true,
   },
   {
-    src: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=70',
-    caption: 'Inventory verification in progress',
+    src: 'https://images.unsplash.com/photo-1601598851547-4302969d0614?auto=format&fit=crop&w=900&q=70',
+    caption: 'Trucks and Loading Areas',
   },
   {
-    src: 'https://images.unsplash.com/photo-1601598851547-4302969d0614?auto=format&fit=crop&w=900&q=70',
-    caption: 'Dispatch fleet at loading bays',
+    src: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=70',
+    caption: 'Staff and Team',
   },
   {
     src: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=900&q=70',
-    caption: 'Container yard operations',
+    caption: 'Warehouse Interiors & Storage',
     tall: true,
   },
   {
     src: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=900&q=70',
-    caption: 'Palletized outbound staging',
+    caption: 'Equipment & Machinery',
   },
   {
     src: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=70',
-    caption: 'Line-haul departure — night shift',
+    caption: 'Safety & Infrastructure',
   },
 ]
 
 /* ── Testimonials ───────────────────────────────────────────────── */
 export const testimonials = [
   {
-    quote:
-      'DNS has been our most dependable CFA in the western region. Stock accuracy is consistently above 99.5% and their claim settlement is the fastest we track across all agencies.',
-    name: 'Amit Deshpande', // MOCK
-    role: 'Regional Logistics Head, Godrej Consumer Products',
+    quote: 'DNS International has provided unmatched CFA and logistics services for us for years. Their focus on safety, documentation, and compliance is exactly what we need.',
+    name: 'Principal Company Partner',
+    role: 'Logistics Division',
   },
   {
-    quote:
-      'Order-to-dispatch turnaround is exceptional. Even during festive peak loads of 2,000+ invoices a day, service levels never dropped. Their team simply does not miss.',
-    name: 'Priya Raghavan', // MOCK
-    role: 'Zonal Sales Manager, Godrej Appliances',
+    quote: 'The warehousing infrastructure and material handling equipment are top-notch. Our stock is always secure and handled with precision.',
+    name: 'Supply Chain Manager',
+    role: 'FMCG Sector',
   },
   {
-    quote:
-      'As a distributor for 15 years, I have never had a delivery dispute that took more than a day to resolve. Documentation is always clean and vehicles always arrive on schedule.',
-    name: 'Suresh Khandelwal', // MOCK
-    role: 'Distributor Partner, Indore',
+    quote: 'We value their transparent operations and zero-compromise attitude towards stock accuracy and timely deliveries across Madhya Pradesh.',
+    name: 'Regional Distributor',
+    role: 'Healthcare & Pharmaceuticals',
   },
 ]
 
 /* ── FAQ ────────────────────────────────────────────────────────── */
 export const faqs = [
   {
-    q: 'What areas do you cover for distribution?',
-    a: 'We handle primary and secondary distribution across Madhya Pradesh and adjoining districts of Rajasthan and Maharashtra, serving 450+ distributors and direct dealers through scheduled beat plans and dedicated line-hauls.',
+    q: 'What regions do you cover?',
+    a: 'We manage comprehensive primary and secondary distribution covering all of Madhya Pradesh.',
   },
   {
-    q: 'What is your order-to-dispatch turnaround time?',
-    a: 'Orders received before 2:00 PM are invoiced, picked, quality-checked and dispatched the same day. Orders after cut-off are dispatched by the next morning line-haul.',
+    q: 'What industries do you serve?',
+    a: 'We support Food & FMCG, Beverages, Healthcare & Pharmaceuticals, Personal Care & Hygiene, Agriculture, Industrial Chemicals, and more.',
   },
   {
-    q: 'How is stock accuracy maintained?',
-    a: 'We follow FIFO/FEFO rotation with batch-level bin mapping, daily cycle counts, barcode-assisted picking and a double-verification gate before loading. Monthly physical audits are reconciled with SAP.',
+    q: 'What kind of infrastructure do you provide?',
+    a: 'Our modern warehousing includes heavy-duty and hydraulic lifts, cold storage, fire-compression systems, CCTV surveillance, and full power backup.',
   },
   {
-    q: 'Is stored stock insured?',
-    a: 'Yes. All stock is covered under comprehensive transit and storage insurance, and our facilities meet fire-safety norms with hydrant networks, sprinklers and 24×7 monitored surveillance.',
+    q: 'How do you ensure stock safety and accuracy?',
+    a: 'Through batch and expiry tracking, daily stock reconciliation, insured stock handling, and a zero-tolerance policy on discrepancies.',
   },
   {
-    q: 'Can you integrate with our ERP or DMS?',
-    a: 'Our operations already run on SAP and standard DMS platforms used by principal companies. We provide daily MIS, live stock reports and API/portal-based visibility as required.',
-  },
-  {
-    q: 'Do you handle appliance and high-value cargo?',
-    a: 'Yes. We operate dedicated zones for appliances and high-value SKUs with caged storage, specialized handling equipment and trained crews for fragile-goods movement.',
+    q: 'Do you offer CFA Management services?',
+    a: 'Yes, we provide end-to-end carrying and forwarding for principal companies including receiving, storage, invoicing, dispatch, and claims settlement.',
   },
 ]
 

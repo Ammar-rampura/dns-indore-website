@@ -5,7 +5,7 @@ export default function Brands() {
   return (
     <section className="brands" id="brands" aria-label="Brands and companies we serve">
       <div className="container brands__head">
-        <p>Trusted Carrying &amp; Forwarding partner for</p>
+        <p>Industries &amp; Services We Support</p>
       </div>
       <div className="brands__marquee" role="presentation">
         <div className="brands__track">
