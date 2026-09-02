@@ -150,7 +150,7 @@ export const infrastructure = {
   title: 'Built for Safety, Scale and Efficiency',
   intro:
     'Our robust infrastructure guarantees that every shipment is stored securely and moved seamlessly.',
-  image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=70',
+  image: '/image3.png',
   imageAlt: 'DNS International Warehouse Infrastructure',
   features: [
     'Heavy-duty lifts with 5–10 ton capacity',
@@ -258,32 +258,15 @@ export const processSteps = [
 
 /* ── Gallery ───────────── */
 export const gallery = [
-  {
-    src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=70',
-    caption: 'Warehouse Exteriors & Facilities',
-    tall: true,
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1601598851547-4302969d0614?auto=format&fit=crop&w=900&q=70',
-    caption: 'Trucks and Loading Areas',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=70',
-    caption: 'Staff and Team',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=900&q=70',
-    caption: 'Warehouse Interiors & Storage',
-    tall: true,
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=900&q=70',
-    caption: 'Equipment & Machinery',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=70',
-    caption: 'Safety & Infrastructure',
-  },
+  { src: '/image1.png', caption: 'Operations Facility 1', tall: true },
+  { src: '/image2.png', caption: 'Operations Facility 2' },
+  { src: '/image3.png', caption: 'Operations Facility 3' },
+  { src: '/image4.png', caption: 'Operations Facility 4', tall: true },
+  { src: '/image5.png', caption: 'Operations Facility 5' },
+  { src: '/image6.png', caption: 'Operations Facility 6' },
+  { src: '/image7.png', caption: 'Operations Facility 7', tall: true },
+  { src: '/image8.png', caption: 'Operations Facility 8' },
+  { src: '/image2.png', caption: 'Operations Facility 9' },
 ]
 
 /* ── Testimonials ───────────────────────────────────────────────── */
@@ -334,8 +317,6 @@ export const navLinks = [
   { id: 'about', label: 'About' },
   { id: 'services', label: 'Services' },
   { id: 'infrastructure', label: 'Infrastructure' },
-  { id: 'operations', label: 'Operations' },
-  { id: 'process', label: 'Process' },
   { id: 'gallery', label: 'Gallery' },
   { id: 'faq', label: 'FAQ' },
   { id: 'contact', label: 'Contact' },

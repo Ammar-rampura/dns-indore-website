@@ -1,8 +1,40 @@
-import { about, company, milestones } from '../data/content.js'
+import { useRef, useEffect } from 'react'
+import { about, company, milestones, principalCompanies } from '../data/content.js'
 import { Reveal, SectionHead } from '../hooks/useReveal.jsx'
 import Icon from './Icons.jsx'
 
 export default function About() {
+  const scrollRef = useRef(null)
+  const isHovering = useRef(false)
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    let animationId
+    const step = () => {
+      if (!isHovering.current) {
+        el.scrollLeft += 1
+        // Reset when scrolled halfway (since list is duplicated for infinite effect)
+        if (el.scrollLeft >= el.scrollWidth / 2) {
+          el.scrollLeft = 0
+        }
+      }
+      animationId = requestAnimationFrame(step)
+    }
+    animationId = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(animationId)
+  }, [])
+
+  const groupedCompanies = principalCompanies.reduce((acc, curr) => {
+    let group = acc.find(g => g.year === curr.year)
+    if (!group) {
+      group = { year: curr.year, companies: [] }
+      acc.push(group)
+    }
+    group.companies.push(curr)
+    return acc
+  }, [])
+
   return (
     <section className="section about" id="about">
       <div className="container about__grid">
@@ -10,8 +42,8 @@ export default function About() {
           <Reveal className="about__img-wrap" dir="left">
             <div className="img-curtain about__img-frame">
               <img
-                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=70"
-                alt="Warehouse team member verifying inventory"
+                src="/image8.png"
+                alt="DNS International Operations"
                 loading="lazy"
               />
             </div>
@@ -63,14 +95,40 @@ export default function About() {
       </div>
 
       <div className="container">
-        <Reveal as="ol" className="about__timeline" delay={100}>
-          {milestones.map((m, i) => (
-            <li className="about__milestone" key={m.year + m.text} style={{ '--d': `${i * 170}ms` }}>
-              <span className="about__milestone-dot" aria-hidden="true" />
-              <b>{m.year}</b>
-              <p>{m.text}</p>
-            </li>
-          ))}
+        <Reveal delay={100}>
+          <ol 
+            className="about__timeline" 
+            ref={scrollRef}
+            onMouseEnter={() => (isHovering.current = true)}
+            onMouseLeave={() => (isHovering.current = false)}
+            onTouchStart={() => (isHovering.current = true)}
+            onTouchEnd={() => (isHovering.current = false)}
+          >
+            {[...groupedCompanies, ...groupedCompanies].map((group, i) => (
+              <li className="about__milestone" key={i + group.year} style={{ '--d': `${(i % 5) * 100}ms` }}>
+                <span className="about__milestone-dot" aria-hidden="true" />
+                <b>{group.year}</b>
+                <div className="about__milestone-logos">
+                  {group.companies.map(comp => (
+                    <div className="about__milestone-logo" key={comp.text}>
+                      <img 
+                        src={comp.logo} 
+                        alt={comp.text} 
+                        loading="lazy"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div className="about__milestone-logo-fallback" style={{ display: 'none' }}>
+                        {comp.text}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </li>
+            ))}
+          </ol>
         </Reveal>
       </div>
     </section>

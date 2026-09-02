@@ -44,7 +44,6 @@ export default function Gallery() {
               }}
             >
               <img src={g.src} alt={g.caption} loading="lazy" />
-              <figcaption>{g.caption}</figcaption>
             </Reveal>
           ))}
         </div>
@@ -60,7 +59,6 @@ export default function Gallery() {
         >
           <figure onClick={(e) => e.stopPropagation()}>
             <img src={lightbox.src.replace('w=900', 'w=1600')} alt={lightbox.caption} />
-            <figcaption>{lightbox.caption}</figcaption>
           </figure>
           <button
             className="lightbox__close"

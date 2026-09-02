@@ -6,30 +6,30 @@
    ════════════════════════════════════════════════════════════════ */
 
 :root {
-  /* Brand blues — deep corporate navy ramp */
-  --brand-950: #0a2440;
-  --brand-900: #0d2f52;
-  --brand-800: #113b66;
-  --brand-700: #15497e;
-  --brand-600: #1a5a99;
-  --brand-500: #1f6cb5;
-  --brand-400: #3b8fd9;
-  --brand-300: #7ab4e8;
-  --brand-100: #d9e8f6;
-  --brand-50: #eff5fb;
+  /* Brand Blue (matches the 'S' in logo) */
+  --brand-950: #001133;
+  --brand-900: #002266;
+  --brand-800: #003399;
+  --brand-700: #0044cc;
+  --brand-600: #0055ff;
+  --brand-500: #3377ff;
+  --brand-400: #6699ff;
+  --brand-300: #99bbff;
+  --brand-100: #e6f0ff;
+  --brand-50: #f2f7ff;
 
-  /* Accent */
-  --gold-400: #e8b84b;
-  --gold-500: #d9a532;
+  /* Accent Red (matches the 'D' in logo) */
+  --gold-400: #ff3333;
+  --gold-500: #cc0000;
 
-  /* Neutrals — tinted toward the brand's blue hue */
-  --ink: #0f1720;
-  --ink-soft: #3e4d5c;
-  --ink-mute: #566472;
-  --line: #e1e8ef;
-  --line-strong: #ccd8e3;
-  --bg: #fbfcfd;
-  --bg-tint: #f2f6f9;
+  /* Neutrals (matches the 'N' and background in logo) */
+  --ink: #000000;
+  --ink-soft: #333333;
+  --ink-mute: #666666;
+  --line: #e6e6e6;
+  --line-strong: #cccccc;
+  --bg: #ffffff;
+  --bg-tint: #f8f9fa;
   --card: #ffffff;
 
   /* Type */
@@ -59,19 +59,19 @@
   --radius-lg: 26px;
 
   /* Layered depth — ambient + key light, tinted to the brand blue */
-  --shadow-xs: 0 1px 2px rgba(9, 33, 60, 0.05);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
   --shadow-sm:
-    0 1px 2px rgba(9, 33, 60, 0.04),
-    0 3px 10px rgba(9, 33, 60, 0.05);
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 3px 10px rgba(0, 0, 0, 0.5);
   --shadow-md:
-    0 1px 2px rgba(9, 33, 60, 0.05),
-    0 8px 20px -4px rgba(9, 33, 60, 0.08),
-    0 20px 44px -12px rgba(9, 33, 60, 0.1);
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 8px 20px -4px rgba(0, 0, 0, 0.8),
+    0 20px 44px -12px rgba(0, 0, 0, 1);
   --shadow-lg:
-    0 2px 4px rgba(9, 33, 60, 0.05),
-    0 12px 28px -6px rgba(9, 33, 60, 0.1),
-    0 36px 80px -18px rgba(9, 33, 60, 0.18);
-  --shadow-brand: 0 8px 22px -6px rgba(20, 74, 128, 0.45);
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 12px 28px -6px rgba(0, 0, 0, 1),
+    0 36px 80px -18px rgba(0, 0, 0, 1);
+  --shadow-brand: 0 8px 22px -6px rgba(20, 74, 128, 0.6);
 
   /* Motion — exponential ease-out family, no overshoot */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -1004,7 +1004,7 @@ body.is-loading .hero__hint {
 
 /* ═══════════════════════════ BRANDS ═══════════════════════════ */
 .brands {
-  padding: 34px 0 60px;
+  padding: 34px 0 20px;
   border-top: 1px solid var(--line);
 }
 .brands__head p {
@@ -1017,6 +1017,7 @@ body.is-loading .hero__hint {
 }
 .brands__marquee {
   overflow: hidden;
+  padding: 10px 0;
   mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
 }
@@ -1197,70 +1198,111 @@ body.is-loading .hero__hint {
 .about__timeline {
   list-style: none;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
-  margin-top: clamp(56px, 7vw, 88px);
-  padding-top: 30px;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 10px 20px 40px 20px;
+  margin-top: clamp(10px, 3vw, 20px);
+  scrollbar-width: none;
 }
-.about__timeline::before {
+.about__timeline::-webkit-scrollbar {
+  display: none;
+}
+.about__milestone::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, var(--brand-400), var(--brand-100));
+  top: -33px;
+  left: 18px;
+  width: calc(100% + 10px);
+  height: 4px;
+  background: var(--brand-100);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 1.6s var(--ease) 0.2s;
+  transition: transform 0.5s var(--ease) calc(0.5s + var(--d, 0s));
+  z-index: -1;
 }
-.about__timeline.is-visible::before {
+.is-visible .about__timeline .about__milestone::before,
+.is-visible.about__timeline .about__milestone::before {
   transform: scaleX(1);
 }
 .about__milestone {
   position: relative;
+  flex: 0 0 160px;
 }
 .about__milestone-dot {
   position: absolute;
-  top: -35px;
+  top: -41px;
   left: 0;
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: var(--brand-500);
-  border: 2.5px solid var(--bg);
-  box-shadow: 0 0 0 2px var(--brand-400);
+  background: var(--bg);
+  border: 4px solid var(--brand-600);
+  box-shadow: 0 0 0 4px var(--bg);
   transform: scale(0);
   transition: transform 0.45s var(--ease-snap) calc(0.4s + var(--d, 0s));
 }
-.about__timeline.is-visible .about__milestone-dot {
+.is-visible .about__timeline .about__milestone-dot,
+.is-visible.about__timeline .about__milestone-dot {
   transform: scale(1);
 }
 .about__milestone b {
   display: block;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  color: var(--brand-800);
-  margin-bottom: 4px;
+  color: var(--brand-900);
+  margin-bottom: 12px;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s var(--ease) calc(0.5s + var(--d, 0s)),
     transform 0.5s var(--ease) calc(0.5s + var(--d, 0s));
 }
-.about__milestone p {
+.about__milestone-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.about__milestone-logo {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s var(--ease) calc(0.54s + var(--d, 0s)),
+    transform 0.5s var(--ease) calc(0.54s + var(--d, 0s));
+}
+.about__milestone-logo img {
+  max-height: 100%;
+  max-width: 130px;
+  object-fit: contain;
+}
+.about__milestone-logo-fallback {
   font-size: 0.85rem;
-  color: var(--ink-mute);
+  font-weight: 700;
+  color: var(--brand-800);
+  padding: 8px 14px;
+  background: var(--brand-50);
+  border-radius: 999px;
+  border: 1px solid var(--brand-100);
+  box-shadow: var(--shadow-xs);
+  white-space: nowrap;
+}
+.about__milestone p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
   max-width: 24ch;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s var(--ease) calc(0.58s + var(--d, 0s)),
     transform 0.5s var(--ease) calc(0.58s + var(--d, 0s));
 }
-.about__timeline.is-visible .about__milestone b,
-.about__timeline.is-visible .about__milestone p {
+.is-visible .about__timeline .about__milestone b,
+.is-visible .about__timeline .about__milestone-logo,
+.is-visible .about__timeline .about__milestone p,
+.is-visible.about__timeline .about__milestone b,
+.is-visible.about__timeline .about__milestone-logo,
+.is-visible.about__timeline .about__milestone p {
   opacity: 1;
   transform: none;
 }
@@ -1520,7 +1562,7 @@ body.is-loading .hero__hint {
 }
 /* Outlined founding-year watermark — the establishment date is the brand's proof */
 .stats::after {
-  content: 'SINCE 2003';
+  content: 'SINCE 1995';
   position: absolute;
   top: 16px;
   right: -0.5%;
