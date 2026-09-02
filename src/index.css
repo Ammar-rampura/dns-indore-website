@@ -1061,6 +1061,9 @@ body.is-loading .hero__hint {
 }
 
 /* ═══════════════════════════ ABOUT ════════════════════════════ */
+.section.about {
+  padding-top: clamp(20px, 4vw, 40px);
+}
 .about__grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -1201,17 +1204,22 @@ body.is-loading .hero__hint {
   display: flex;
   gap: 24px;
   overflow-x: auto;
-  padding: 10px 20px 40px 20px;
+  padding: 10px 20px 20px 20px;
   margin-top: clamp(10px, 3vw, 20px);
   scrollbar-width: none;
 }
 .about__timeline::-webkit-scrollbar {
   display: none;
 }
+.about__milestone {
+  position: relative;
+  flex: 0 0 160px;
+  padding-top: 30px;
+}
 .about__milestone::before {
   content: '';
   position: absolute;
-  top: -33px;
+  top: 8px;
   left: 18px;
   width: calc(100% + 10px);
   height: 4px;
@@ -1225,13 +1233,9 @@ body.is-loading .hero__hint {
 .is-visible.about__timeline .about__milestone::before {
   transform: scaleX(1);
 }
-.about__milestone {
-  position: relative;
-  flex: 0 0 160px;
-}
 .about__milestone-dot {
   position: absolute;
-  top: -41px;
+  top: 0;
   left: 0;
   width: 18px;
   height: 18px;
@@ -1264,29 +1268,62 @@ body.is-loading .hero__hint {
   gap: 8px;
 }
 .about__milestone-logo {
-  height: 48px;
+  height: 52px;
+  width: max-content;
+  min-width: 140px;
+  max-width: 260px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 8px 16px 8px 12px;
+  background: var(--card);
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-xs);
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s var(--ease) calc(0.54s + var(--d, 0s)),
-    transform 0.5s var(--ease) calc(0.54s + var(--d, 0s));
+    transform 0.5s var(--ease) calc(0.54s + var(--d, 0s)),
+    box-shadow 0.3s, border-color 0.3s;
+}
+.about__milestone-logo:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--brand-300);
 }
 .about__milestone-logo img {
-  max-height: 100%;
-  max-width: 130px;
+  height: 32px;
+  width: 48px;
   object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.75;
+  transition: filter 0.3s, opacity 0.3s;
 }
-.about__milestone-logo-fallback {
-  font-size: 0.85rem;
+.about__milestone-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.about__milestone-logo span {
+  font-size: 0.82rem;
   font-weight: 700;
-  color: var(--brand-800);
-  padding: 8px 14px;
-  background: var(--brand-50);
-  border-radius: 999px;
-  border: 1px solid var(--brand-100);
-  box-shadow: var(--shadow-xs);
+  color: var(--brand-900);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.about__milestone-logo--placeholder {
+  background: transparent;
+  border: 1px dashed var(--line);
+  box-shadow: none;
+  opacity: 0.4;
+  pointer-events: none;
+  justify-content: center;
+}
+.placeholder-dash {
+  width: 24px;
+  height: 2px;
+  background: var(--line);
+  border-radius: 2px;
 }
 .about__milestone p {
   font-size: 0.9rem;

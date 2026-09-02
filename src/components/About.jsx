@@ -35,6 +35,8 @@ export default function About() {
     return acc
   }, [])
 
+  const maxCompanies = Math.max(...groupedCompanies.map(g => g.companies.length))
+
   return (
     <section className="section about" id="about">
       <div className="container about__grid">
@@ -117,12 +119,14 @@ export default function About() {
                         loading="lazy"
                         onError={(e) => {
                           e.target.style.display = 'none';
-                          e.target.nextSibling.style.display = 'flex';
                         }}
                       />
-                      <div className="about__milestone-logo-fallback" style={{ display: 'none' }}>
-                        {comp.text}
-                      </div>
+                      <span>{comp.text}</span>
+                    </div>
+                  ))}
+                  {Array.from({ length: maxCompanies - group.companies.length }).map((_, idx) => (
+                    <div className="about__milestone-logo about__milestone-logo--placeholder" key={`placeholder-${idx}`}>
+                      <div className="placeholder-dash"></div>
                     </div>
                   ))}
                 </div>

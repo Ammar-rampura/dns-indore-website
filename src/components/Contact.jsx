@@ -30,12 +30,24 @@ export default function Contact() {
   const onSubmit = (e) => {
     e.preventDefault()
     if (sending) return
-    // MOCK — wire this to your backend / email service (e.g. EmailJS, Formspree, own API)
+    
+    const formData = new FormData(e.target)
+    const name = formData.get('name')
+    const company = formData.get('company') || 'N/A'
+    const phone = formData.get('phone')
+    const email = formData.get('email') || 'N/A'
+    const subject = formData.get('subject')
+    const message = formData.get('message')
+    
+    const whatsappMsg = `*New Contact Request*\n*Name:* ${name}\n*Company:* ${company}\n*Phone:* ${phone}\n*Email:* ${email}\n*Interest:* ${subject}\n*Message:* ${message}`
+    const whatsappUrl = `https://wa.me/917723868522?text=${encodeURIComponent(whatsappMsg)}`
+    
     setSending(true)
     setTimeout(() => {
       setSending(false)
       setSent(true)
-    }, 1100)
+      window.open(whatsappUrl, '_blank')
+    }, 600)
   }
 
   return (

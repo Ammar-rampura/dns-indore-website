@@ -6,7 +6,7 @@ export default function Process() {
     <section className="section section--tint" id="process">
       <div className="container">
         <SectionHead
-          eyebrow="Process & Workflow"
+          eyebrow="Delivery Process"
           title="From factory gate to proof of delivery"
           lead="Every shipment follows the same disciplined six-stage workflow — auditable at every step."
         />
